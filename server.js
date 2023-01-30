@@ -6,7 +6,7 @@ import cors from 'cors';
 import morgan from 'morgan';
 import userRouter from './routes/userRoute.js';
 
-const URI = process.env.MONGO || "mongodb://localhost:27017/tourguideapp";
+const URI = process.env.MONGO;
 const app = express();
 const PORT = 5555;
 
