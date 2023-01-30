@@ -5,7 +5,7 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 import morgan from 'morgan';
 import userRouter from './routes/userRoute.js';
-// import {errorHandler} from './middleware/errorHandler.js';
+import errorHandler from './middleware/errorHandler.js';
 
 const URI = process.env.MONGO;
 const app = express();
@@ -23,7 +23,7 @@ app.use(cors());
 app.use(morgan('dev'));
 app.use('/user', userRouter);
 
-// app.use(errorHandler);
+app.use(errorHandler);
 
 app.listen(PORT, () => {
   console.log(`Server läuft auf Port: ${PORT}`);
