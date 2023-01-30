@@ -6,6 +6,7 @@ const userSchema = new Schema ({
   profilname: {
     type: String,
     required: true,
+    unique: true,
     trim: true,
     min: 3,
     max: 20,
@@ -20,13 +21,14 @@ const userSchema = new Schema ({
   email: {
     type: String,
     required: true,
-    trim: true,
     unique: true,
+    trim: true,
     lowercase: true
   },
   passwort: {
     type: String,
-    required: true
+    required: true,
+    min: 6
   },
   avatar: {
     type: String
