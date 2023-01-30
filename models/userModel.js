@@ -3,15 +3,24 @@ import mongoose, {Schema, model} from 'mongoose';
 const userSchema = new Schema ({
   profilname: {
     type: String,
-    required: true
+    required: true,
+    trim: true,
+    min: 3,
+    max: 20,
   },
   stadt: {
     type: String,
-    required: true
+    required: true,
+    trim: true,
+    min: 3,
+    max: 20,
   },
   email: {
     type: String,
-    required: true
+    required: true,
+    trim: true,
+    unique: true,
+    lowercase: true
   },
   passwort: {
     type: String,
@@ -29,11 +38,11 @@ const userSchema = new Schema ({
     type: String
   },
   isAdmin: {
-    type: Boolean,
-    required: true, 
-    default: false
+    type: String,
+    enum: ["user", "admin"],
+    default: "user"
   }
-});
+},{timestamps: true});
 
 const userModel = model('User', userSchema);
 export default userModel;
