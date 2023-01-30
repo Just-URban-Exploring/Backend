@@ -13,7 +13,7 @@ const PORT = 5555;
 mongoose
   .connect(URI)
   .then(() => console.log(`Mit Datenbank verrbunden`))
-  .catch((error) => console.log(`Verbinden mit Datenbank fehlgeschlagen`, err));
+  .catch((error) => console.log(`Verbinden mit Datenbank fehlgeschlagen`, error));
 
 mongoose.connection.on('error', console.log);
 
