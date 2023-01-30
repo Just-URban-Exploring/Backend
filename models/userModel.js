@@ -18,8 +18,7 @@ const userSchema = new Schema ({
     required: true
   },
   avatar: {
-    type: String,
-    required: true
+    type: String
   },
   audio: {
     type: String,
@@ -27,8 +26,7 @@ const userSchema = new Schema ({
     default: false
   },
   abo: {
-    type: String,
-    required: true
+    type: String
   },
   isAdmin: {
     type: Boolean,
