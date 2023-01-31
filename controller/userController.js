@@ -50,4 +50,14 @@ export const userLoginController = async (req, res, next) => {
   } catch (error) {
     next(error)
   }
+};
+
+export const getUserDataController = async (req, res, next) => {
+  try {
+    const id= req.params.id;
+    const userData = await User.findById(id);
+    res.json(userData);
+  } catch (error) {
+    next(error);
+  }
 }

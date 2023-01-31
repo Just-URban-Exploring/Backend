@@ -2,9 +2,10 @@ import express from 'express';
 
 const userRouter = express.Router();
 
-import {addNewUser, userLoginController} from '../controller/userController.js';
+import {addNewUser, userLoginController, getUserDataController} from '../controller/userController.js';
 import {userValidator} from '../middleware/userValidator.js';
 import {validatorRequest} from '../middleware/validator.js';
+import {auth} from '../middleware/auth.js';
 
 userRouter
   .route('/registration')
@@ -12,6 +13,10 @@ userRouter
 
 userRouter
   .route('/login')
-    .post(userLoginController)
+    .post(userLoginController);
+
+userRouter
+  .route('/:id')
+    .get(getUserDataController);
 
 export default userRouter;
