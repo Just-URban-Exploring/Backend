@@ -28,6 +28,8 @@ https://nodejs.org/en/
 `npm i jsonwebtoken`
 ### 2.10 bcrypt
 `npm i bcrypt`
+### 2.11 http-status-codes
+`npm i http-status-codes`
 ## 3. Deploy
 ## 4. Appendix
 
