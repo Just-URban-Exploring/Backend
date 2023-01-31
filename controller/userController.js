@@ -1,5 +1,6 @@
 import User from '../models/userModel.js';
 import bcrypt from 'bcrypt';
+import jwt from 'jsonwebtoken';
 
 export const addNewUser = async (req,res) => {
   try {
@@ -15,3 +16,35 @@ export const addNewUser = async (req,res) => {
     res.status(400).send(error);
   }
 };
+
+export const userLoginController = async (req, res, next) => {
+  try {
+    const userData = req.body;
+    const userInDb = await User.findOne({email: userData.email});
+    if(!userInDb) {
+      const error = new Error(`User mit der Email ${userData.email} vorhanden`);
+      error.statusCode = 401;
+      throw error;
+    }
+    const checkPw = await bcrypt.compare(
+      userData.passwort,
+      userInDb.passwort
+    );
+    if(!checkPw) {
+      const error = new Error (`Invalid Passwort`);
+      error.statusCode = 401;
+      throw error;
+    }
+    const token = jwt.sign({
+      email: userInDb.email,
+      userId: userInDb._id
+    }, process.env.SECRET_KEY || 'Geheimnis',
+      {expiresIn: '3h'});
+      res.send({
+        message: 'Login erfolgreich',
+      token
+    });
+  } catch (error) {
+    next(error)
+  }
+}
