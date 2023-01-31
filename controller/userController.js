@@ -20,9 +20,12 @@ export const addNewUser = async (req,res) => {
 export const userLoginController = async (req, res, next) => {
   try {
     const userData = req.body;
-    const userInDb = await User.findOne({email: userData.email});
+    const userInDb = await User.findOne({
+      email: userData.email,
+      profilname: userData.profilname
+    });
     if(!userInDb) {
-      const error = new Error(`User mit der Email ${userData.email} nicht vorhanden`);
+      const error = new Error(`Profilname ${userData.profilname} oder Email ${userData.email} stimmen nicht überein`);
       error.statusCode = 401;
       throw error;
     }
