@@ -22,7 +22,7 @@ export const userLoginController = async (req, res, next) => {
     const userData = req.body;
     const userInDb = await User.findOne({email: userData.email});
     if(!userInDb) {
-      const error = new Error(`User mit der Email ${userData.email} vorhanden`);
+      const error = new Error(`User mit der Email ${userData.email} nicht vorhanden`);
       error.statusCode = 401;
       throw error;
     }
