@@ -17,6 +17,6 @@ userRouter
 
 userRouter
   .route('/:id')
-    .get(getUserDataController);
+    .get(auth, getUserDataController);
 
 export default userRouter;
