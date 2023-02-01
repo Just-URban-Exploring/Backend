@@ -8,7 +8,7 @@ export const userValidator = [
     .escape(),
   body("stadt")
     .trim()
-    .isLength({min: 3, max: 20})
+    .isLength({max: 20})
     .withMessage('Bitte mindestens 3 Zeichen,maximal 20.')
     .escape(),
   body("email")

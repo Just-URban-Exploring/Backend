@@ -9,7 +9,9 @@ import {auth} from '../middleware/auth.js';
 
 userRouter
   .route('/registration')
-    .post(userValidator, validatorRequest, addNewUser);
+    .post(
+      userValidator, validatorRequest, 
+      addNewUser);
 
 userRouter
   .route('/login')

@@ -10,7 +10,9 @@ export const addNewUser = async (req,res) => {
       ...newUser,
       passwort: hashedPw,
     });
-    res.status(200).send({profilname, stadt, email, avatar, audio, abo, _id});
+    res.status(200).send({profilname, stadt, email
+      // avatar, audio, abo, _id
+    });
   } catch (error) {
     console.log(error);
     res.status(400).send(error);
