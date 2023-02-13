@@ -23,11 +23,11 @@ export const userLoginController = async (req, res, next) => {
   try {
     const userData = req.body;
     const userInDb = await User.findOne({
-      email: userData.email,
-      profilname: userData.profilname
+      email: userData.email
+      // profilname: userData.profilname
     });
     if(!userInDb) {
-      const error = new Error(`Profilname ${userData.profilname} oder Email ${userData.email} stimmen nicht überein`);
+      const error = new Error(`Email ${userData.email} stimmt nicht überein`);
       error.statusCode = 401;
       throw error;
     }
