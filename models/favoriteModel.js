@@ -1,10 +1,11 @@
 import mongoose, { Schema, model } from "mongoose";
 
 const favoriteSchema = new Schema({
-stadt: { location1: "xyz", 
-        location2: "akjsjh" },
-stadt2: {location1:"kasklds"},
-stadt3: {}
+  favoriteLocations: [
+    { type: mongoose.Schema.Types.ObjectId, ref: "Locations", unique: true },
+  ],
 });
 
 const favoriteModel = model("Favorite", favoriteSchema);
+
+export default favoriteModel;

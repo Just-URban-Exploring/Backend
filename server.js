@@ -7,6 +7,8 @@ import morgan from "morgan";
 import userRouter from "./routes/userRoute.js";
 import errorHandler from "./middleware/errorHandler.js";
 import locationsRouter from "./routes/locationsRoute.js";
+import favoriteRouter from "./routes/favoriteRoute.js";
+// import cityRouter from "./routes/cityRoute.js";
 
 const URI = process.env.MONGO;
 const app = express();
@@ -25,7 +27,9 @@ app.use(express.json());
 app.use(cors());
 app.use(morgan("dev"));
 app.use("/user", userRouter);
-app.use("/city", locationsRouter);
+// app.use("/city", cityRouter);
+app.use("/location", locationsRouter);
+app.use("/favorites", favoriteRouter)
 
 app.use(errorHandler);
 

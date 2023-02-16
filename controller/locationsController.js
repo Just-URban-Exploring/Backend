@@ -1,17 +1,9 @@
 import locationsModel from "../models/locationsModel.js";
 
-export const getCity = async (req, res, next) => {
+export const getLocation = async (req, res, next) => {
   try {
-    const getCity = await locationsModel.findById(req.params.id);
-    res.send(getCity);
-  } catch (error) {
-    next(error);
-  }
-};
-export const addCity = async (req, res, next) => {
-  try {
-    const newCity = await locationsModel.create(req.body);
-    res.send(newCity);
+    const getLocation = await locationsModel.findById(req.params.id);
+    res.send(getLocation);
   } catch (error) {
     next(error);
   }
