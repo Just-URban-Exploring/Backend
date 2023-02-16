@@ -6,11 +6,11 @@ export const addNewUser = async (req,res) => {
   try {
     const newUser = req.body;
     const hashedPw = await bcrypt.hash(newUser.passwort, 10);
-    const {profilname, stadt, email, avatar, audio, abo, _id} = await User.create({
+    const {profilname, stadt, email, favorites, avatar, audio, abo, _id} = await User.create({
       ...newUser,
       passwort: hashedPw,
     });
-    res.status(200).send({profilname, stadt, email
+    res.status(200).send({profilname, stadt, email, favorites
       // avatar, audio, abo, _id
     });
   } catch (error) {

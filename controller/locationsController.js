@@ -11,7 +11,7 @@ export const getLocation = async (req, res, next) => {
 
 export const addLocation = async (req, res, next) => {
   try {
-    const newLocation = await locationsModel.findByIdAndUpdate(req.params.id);
+    const newLocation = await locationsModel.create(req.body);
     res.send(newLocation);
   } catch (error) {
     next(error);

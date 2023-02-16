@@ -7,6 +7,7 @@ const locationsSchema = new Schema({
   extendedInfo: { type: String },
   icon: { type: String },
   audioUrl: { type: String },
+  stadt: { type: String }, 
   // cityParent: {
   //   type: mongoose.Schema.Types.ObjectId,
   //   ref: "Cities",

@@ -5,7 +5,6 @@ const userSchema = new Schema(
     profilname: {
       type: String,
       required: true,
-      unique: true,
       trim: true,
       min: 3,
       max: 20,
@@ -43,7 +42,7 @@ const userSchema = new Schema(
     //   enum: ["user", "admin"],
     //   default: "user"
     // }
-    favorites: [{ type: mongoose.Schema.Types.ObjectId, ref: "Locations" }],
+    favorites: [{ type: mongoose.Schema.Types.ObjectId, ref: "Favorite" }],
   },
   { timestamps: true }
 );
