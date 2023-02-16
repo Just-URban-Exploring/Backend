@@ -27,9 +27,9 @@ app.use(express.json());
 app.use(cors());
 app.use(morgan("dev"));
 app.use("/user", userRouter);
-// app.use("/city", cityRouter);
 app.use("/location", locationsRouter);
-app.use("/favorites", favoriteRouter)
+// app.use("/city", cityRouter);
+// app.use("/favorites", favoriteRouter);
 
 app.use(errorHandler);
 

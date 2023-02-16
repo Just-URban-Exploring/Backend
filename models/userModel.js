@@ -42,7 +42,7 @@ const userSchema = new Schema(
     //   enum: ["user", "admin"],
     //   default: "user"
     // }
-    favorites: [{ type: mongoose.Schema.Types.ObjectId, ref: "Favorite" }],
+    favorites: [{ type: mongoose.Schema.Types.ObjectId, ref: "Location" }],
   },
   { timestamps: true }
 );

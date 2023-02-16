@@ -1,5 +1,6 @@
 import locationsModel from "../models/locationsModel.js";
 
+// GET und POST einzelne Location
 export const getLocation = async (req, res, next) => {
   try {
     const getLocation = await locationsModel.findById(req.params.id);
