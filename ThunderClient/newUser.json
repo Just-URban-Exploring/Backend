@@ -1,7 +1,15 @@
-{
-  "profilname": "El'la El'la",
-  "stadt": "Münster",
-  "email": "kfkgfjadfsgdlkjhg@gmx.de",
-  "passwort": "123456",
-  "favorites": "63ee081d2a20c6c8b4813104"
-}
+[
+  {
+    "profilname": "El'la El'la",
+    "stadt": "Münster",
+    "email": "kfkgfjadfsgdlkjhg@gmx.de",
+    "passwort": "123456",
+    "favorites": "63ee081d2a20c6c8b4813104"
+  },
+  {
+    "profilname": "Krümelmonster Ella",
+    "stadt": "Münchhausen",
+    "email": "sesamstrasse@gmx.de",
+    "passwort": "123456"
+  }
+]

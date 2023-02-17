@@ -1,4 +1,4 @@
-import cityModel from "../models/cityModel.js";
+import cityModel from "../../models/out/cityModel.js";
 
 export const getCity = async (req, res, next) => {
   try {

@@ -19,8 +19,8 @@ userRouter
 userRouter.route("/login").post(userLoginController);
 
 userRouter
-  .route("/:id")
+  .route("/:id/fav")
   .get(auth, getUserDataController)
-  .post(addFavoriteToUser);
+  .post(auth, addFavoriteToUser);
 
 export default userRouter;
