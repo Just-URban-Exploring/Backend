@@ -7,7 +7,7 @@ import morgan from "morgan";
 import userRouter from "./routes/userRoute.js";
 import errorHandler from "./middleware/errorHandler.js";
 import locationsRouter from "./routes/locationsRoute.js";
-import favoriteRouter from "./routes/favoriteRoute.js";
+// import favoriteRouter from "./routes/favoriteRoute.js";
 // import cityRouter from "./routes/cityRoute.js";
 
 const URI = process.env.MONGO;
