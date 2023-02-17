@@ -73,6 +73,19 @@ export const getUserDataController = async (req, res, next) => {
   }
 };
 
+// Update User
+export const userUpdate = async (req, res) => {
+  try {
+    const id = req.params.id;
+    const update = req.body;
+    const userUpdate = await User.findByIdAndUpdate(id, update, { new: true });
+    res.status(200).send(userUpdate);
+  } catch (error) {
+    console.log(error);
+    res.status(400).send(error);
+  }
+};
+
 // Eine neue Location als Favorite hinzufügen
 
 export const addFavoriteToUser = async (req, res, next) => {
