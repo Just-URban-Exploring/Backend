@@ -23,5 +23,125 @@
     "extendedInfo": "Der Reichstag ist ein historisches Gebäude in Berlin und seit 1999 Sitz des Deutschen Bundestages. Es war früher das Parlamentsgebäude des Deutschen Kaiserreichs und des Deutschen Reiches und ist heute ein wichtiger Touristenort.",
     "icon": "https://disdukcapil.lampungtengahkab.go.id/upload/strukturorganisasi.jpg",
     "stadt": "Berlin"
+  },
+  {
+    "name": "Tiegarten",
+    "location": [52.513083, 13.358056],
+    "extendedInfo": "#",
+    "icon": "https://disdukcapil.lampungtengahkab.go.id/upload/strukturorganisasi.jpg"
+  },
+  {
+    "name": "Schloss Bellevue",
+    "location": [52.519384, 13.35719],
+    "extendedInfo": "#",
+    "icon": "https://disdukcapil.lampungtengahkab.go.id/upload/strukturorganisasi.jpg"
+  },
+  {
+    "name": "Siegessäule",
+    "location": [52.506916, 13.353682],
+    "extendedInfo": "#",
+    "icon": "https://disdukcapil.lampungtengahkab.go.id/upload/strukturorganisasi.jpg"
+  },
+  {
+    "name": "Museumsinsel",
+    "location": [52.51878, 13.40451],
+    "extendedInfo": "#",
+    "icon": "https://disdukcapil.lampungtengahkab.go.id/upload/strukturorganisasi.jpg"
+  },
+  {
+    "name": "Bode-Museum",
+    "location": [52.518611, 13.405556],
+    "extendedInfo": "#",
+    "icon": "https://disdukcapil.lampungtengahkab.go.id/upload/strukturorganisasi.jpg"
+  },
+  {
+    "name": "Alte Nationalgalerie",
+    "location": [52.518445, 13.406083],
+    "extendedInfo": "#",
+    "icon": "https://disdukcapil.lampungtengahkab.go.id/upload/strukturorganisasi.jpg"
+  },
+  {
+    "name": "Neues Museum",
+    "location": [52.518416, 13.406389],
+    "extendedInfo": "#",
+    "icon": "https://disdukcapil.lampungtengahkab.go.id/upload/strukturorganisasi.jpg"
+  },
+  {
+    "name": "Pergamonmuseum",
+    "location": [52.518445, 13.406389],
+    "extendedInfo": "#",
+    "icon": "https://disdukcapil.lampungtengahkab.go.id/upload/strukturorganisasi.jpg"
+  },
+  {
+    "name": "Altes Museum",
+    "location": [52.518416, 13.406389],
+    "extendedInfo": "#",
+    "icon": "https://disdukcapil.lampungtengahkab.go.id/upload/strukturorganisasi.jpg"
+  },
+  {
+    "name": "Lustgarten",
+    "location": [52.519336, 13.396955],
+    "extendedInfo": "#",
+    "icon": "https://disdukcapil.lampungtengahkab.go.id/upload/strukturorganisasi.jpg"
+  },
+  {
+    "name": "Berliner Dom",
+    "location": [52.519386, 13.403094],
+    "extendedInfo": "#",
+    "icon": "https://disdukcapil.lampungtengahkab.go.id/upload/strukturorganisasi.jpg"
+  },
+  {
+    "name": "Humboldtforum",
+    "location": [52.519171, 13.3975],
+    "extendedInfo": "#",
+    "icon": "https://disdukcapil.lampungtengahkab.go.id/upload/strukturorganisasi.jpg"
+  },
+  {
+    "name": "Neue Wache als Ehrenmal",
+    "location": [52.519528, 13.388083],
+    "extendedInfo": "#",
+    "icon": "https://disdukcapil.lampungtengahkab.go.id/upload/strukturorganisasi.jpg"
+  },
+  {
+    "name": "Humboldt-Universität",
+    "location": [52.517833, 13.396916],
+    "extendedInfo": "#",
+    "icon": "https://disdukcapil.lampungtengahkab.go.id/upload/strukturorganisasi.jpg"
+  },
+  {
+    "name": "Die 'Kommode' (Alte Bibliothek)",
+    "location": [52.517833, 13.396916],
+    "extendedInfo": "#",
+    "icon": "https://disdukcapil.lampungtengahkab.go.id/upload/strukturorganisasi.jpg"
+  },
+  {
+    "name": "Staatsoper Unter den Linden",
+    "location": [52.517027, 13.395833],
+    "extendedInfo": "#",
+    "icon": "https://disdukcapil.lampungtengahkab.go.id/upload/strukturorganisasi.jpg"
+  },
+  {
+    "name": "Reiterstandbild Friedrichs des Großen",
+    "location": [52.516836, 13.395419],
+    "extendedInfo": "#",
+    "icon": "https://disdukcapil.lampungtengahkab.go.id/upload/strukturorganisasi.jpg"
+  },
+  {
+    "name": "Weltzeituhr",
+    "location": [52.516386, 13.395416],
+    "extendedInfo": "#",
+    "icon": "https://disdukcapil.lampungtengahkab.go.id/upload/strukturorganisasi.jpg"
+  },
+  {
+    "name": "Rotes Rathaus",
+    "location": [52.5169248, 13.3958007],
+    "extendedInfo": "#",
+    "icon": "https://disdukcapil.lampungtengahkab.go.id/upload/strukturorganisasi.jpg"
+  },
+  {
+    "name": "Neptunbrunnen",
+    "location": [52.5169248, 13.3958007],
+    "extendedInfo": "#",
+    "icon": "https://disdukcapil.lampungtengahkab.go.id/upload/strukturorganisasi.jpg"
   }
 ]
