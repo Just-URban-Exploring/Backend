@@ -91,16 +91,15 @@ export const userUpdate = async (req, res) => {
 export const addFavoriteToUser = async (req, res, next) => {
   try {
     const userId = req.params.id;
-    console.log("userId: " + userId);
-    const locationId = req.body.mett;
-    console.log("locationId: " + locationId);
+    const locationId = req.body.like;
     const currentUser = await User.findById(userId);
-    console.log("currentUser: " + currentUser);
-    currentUser.favorites.push(locationId);
-    currentUser.favorites.remove(locationId);
+    if (currentUser.favorites.includes(locationId)) {
+      currentUser.favorites.remove(locationId);
+    } else {
+      currentUser.favorites.push(locationId);
+    }
     await currentUser.save();
     res.status(200).send(currentUser);
-    console.log("currentUser nach Post: " + currentUser);
   } catch (error) {
     next();
   }
