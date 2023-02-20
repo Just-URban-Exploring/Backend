@@ -10,7 +10,7 @@ import {
 } from "../controller/userController.js";
 import { userValidator } from "../middleware/userValidator.js";
 import { validatorRequest } from "../middleware/validator.js";
-import { auth } from "../middleware/auth.js";
+// import { auth } from "../middleware/auth.js";
 
 userRouter
   .route("/registration")
@@ -18,9 +18,6 @@ userRouter
 
 userRouter.route("/login").post(userLoginController);
 
-userRouter
-  .route("/:id/fav")
-  .get(auth, getUserDataController)
-  .post(auth, addFavoriteToUser);
+userRouter.route("/:id/fav").get(getUserDataController).post(addFavoriteToUser);
 
 export default userRouter;
