@@ -7,11 +7,11 @@ import jwt from "jsonwebtoken";
 export const addNewUser = async (req, res) => {
   try {
     const newUser = req.body;
-    const hashedPw = await bcrypt.hash(newUser.passwort, 10);
+    const hashedPw = await bcrypt.hash(newUser.password, 10);
     const { profilname, stadt, email, favorites, avatar, audio, abo, _id } =
       await User.create({
         ...newUser,
-        passwort: hashedPw,
+        password: hashedPw,
       });
     res.status(200).send({
       profilname,
@@ -39,7 +39,7 @@ export const userLoginController = async (req, res, next) => {
       error.statusCode = 401;
       throw error;
     }
-    const checkPw = await bcrypt.compare(userData.passwort, userInDb.passwort);
+    const checkPw = await bcrypt.compare(userData.password, userInDb.password);
     if (!checkPw) {
       const error = new Error(`Invalid Passwort`);
       error.statusCode = 401;
