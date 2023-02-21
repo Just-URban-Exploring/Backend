@@ -18,21 +18,17 @@ const userSchema = new Schema(
     email: {
       type: String,
       required: true,
-      unique: true,
+      unique: [true, "Email Exist"],
       trim: true,
     },
-    passwort: {
+    password: {
       type: String,
-      required: true,
+      required: [true, "Please provide a password!"],
+      unique: false,
       min: 6,
     },
     // avatar: {
     //   type: String
-    // },
-    // audio: {
-    //   type: String,
-    //   // required: true,
-    //   default: false
     // },
     // abo: {
     //   type: String
