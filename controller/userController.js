@@ -7,22 +7,39 @@ import jwt from "jsonwebtoken";
 export const addNewUser = async (req, res) => {
   try {
     const newUser = req.body;
+
     const hashedPw = await bcrypt.hash(newUser.password, 10);
-    const { profilname, stadt, email, favorites, avatar, audio, abo, _id } =
-      await User.create({
-        ...newUser,
-        password: hashedPw,
-      });
-    res.status(200).send({
-      profilname,
-      stadt,
-      email,
-      favorites,
-      // avatar, audio, abo, _id
+
+    const createUser = await User.create({
+      profilname: newUser.profilname,
+      stadt: newUser.stadt,
+      email: newUser.email,
+      favorites: newUser.favorites,
+      avatar: newUser.avatar,
+      abo: newUser.abo,
+      password: hashedPw,
     });
+    createUser
+      .save()
+      // return success if the new user is added to the database successfully
+      .then((result) => {
+        res.status(201).send({
+          message: "User Created Successfully",
+          result,
+        });
+      })
+      .catch((error) => {
+        res.status(500).send({
+          message: "uups",
+          error,
+        });
+      });
+    // catch error if the new user wasn't added successfully to the database
   } catch (error) {
-    console.log(error);
-    res.status(400).send(error);
+    res.status(500).send({
+      message: "User can't be created - ERROR!!!!",
+      error,
+    });
   }
 };
 
