@@ -28,7 +28,7 @@ app.use(express.json());
 // app.use(cors({ origin: `${URO}`, credentials: true }));
 app.use(cors());
 app.use(morgan("dev"));
-app.use("/", userRouter);
+app.use("/users", userRouter);
 // app.use("/location", locationsRouter);
 // app.use("/city", cityRouter);
 // app.use("/favorites", favoriteRouter);
