@@ -11,6 +11,7 @@ import locationsRouter from "./routes/locationsRoute.js";
 // import cityRouter from "./routes/cityRoute.js";
 
 const URI = process.env.MONGO;
+const URO = process.env.CLIENT;
 const app = express();
 const PORT = 5555;
 
@@ -24,7 +25,7 @@ mongoose
 mongoose.connection.on("error", console.log);
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({ origin: `${URO}`, credentials: true }));
 app.use(morgan("dev"));
 app.use("/user", userRouter);
 app.use("/location", locationsRouter);
