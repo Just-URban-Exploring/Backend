@@ -29,7 +29,7 @@ app.use(cors({
   credentials: true,
 }));
 app.use(morgan("dev"));
-app.options('*', cors())
+// app.options('*', cors())
 app.use("/user", userRouter);
 app.use("/location", locationsRouter);
 // app.use("/city", cityRouter);
