@@ -13,6 +13,7 @@ import errorHandler from "./middleware/errorHandler.js";
 const URI = process.env.MONGO || "mongodb://localhost:5555/tourguide";
 // const URO = process.env.CLIENT;
 const app = express();
+const cors = require('cors');
 const PORT = 5555;
 
 mongoose
