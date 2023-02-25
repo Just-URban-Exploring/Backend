@@ -12,7 +12,7 @@ import locationsRouter from "./routes/locationsRoute.js";
 
 const URI = process.env.MONGO;
 const app = express();
-const PORT = 5555;
+const PORT = 4000;
 
 mongoose
   .connect(URI)
@@ -24,10 +24,12 @@ mongoose
 mongoose.connection.on("error", console.log);
 
 app.use(express.json());
-app.use(cors({
-  origin: process.env.CLIENT || 'http://localhost:5173',
-  credentials: true,
-}));
+app.use(
+  cors({
+    origin: process.env.CLIENT,
+    credentials: true,
+  })
+);
 app.use(morgan("dev"));
 // app.options('*', cors())
 app.use("/user", userRouter);
