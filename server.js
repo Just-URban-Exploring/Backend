@@ -10,7 +10,7 @@ import locationsRouter from "./routes/locationsRoute.js";
 // import favoriteRouter from "./routes/favoriteRoute.js";
 // import cityRouter from "./routes/cityRoute.js";
 
-const URI = process.env.MONGO;
+const URI = process.env.MONGO || "mongodb://localhost:5555/users";
 const URO = process.env.CLIENT;
 const app = express();
 const PORT = 5555;
@@ -27,7 +27,7 @@ mongoose.connection.on("error", console.log);
 app.use(express.json());
 app.use(cors({ origin: `${URO}`, credentials: true }));
 app.use(morgan("dev"));
-app.use("/user", userRouter);
+app.use("/", userRouter);
 app.use("/location", locationsRouter);
 // app.use("/city", cityRouter);
 // app.use("/favorites", favoriteRouter);
