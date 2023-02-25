@@ -26,6 +26,7 @@ mongoose.connection.on("error", console.log);
 app.use(express.json());
 app.use(cors());
 app.use(morgan("dev"));
+app.options('*', cors())
 app.use("/user", userRouter);
 app.use("/location", locationsRouter);
 // app.use("/city", cityRouter);
