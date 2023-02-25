@@ -12,9 +12,8 @@ import { userValidator } from "../middleware/userValidator.js";
 import { validatorRequest } from "../middleware/validator.js";
 // import { auth } from "../middleware/auth.js";
 
-userRouter
-  .route("/registration")
-  .post(userValidator, validatorRequest, addNewUser);
+app.options("*", cors());
+userRouter.route("/register").post(userValidator, validatorRequest, addNewUser);
 
 userRouter.route("/login").post(userLoginController);
 
