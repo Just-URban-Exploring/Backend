@@ -103,6 +103,21 @@ export const userUpdate = async (req, res) => {
   }
 };
 
+// Delete User
+export const deleteOneUser = async (req, res) => {
+  try {
+    const id = req.params.id;
+    const deletedUser = await User.findByIdAndDelete(id, { new: true });
+    res.status(200).send({
+      message: "User gelöscht!",
+      deletedUser,
+    });
+  } catch (error) {
+    console.log(error);
+    res.status(400).send(error);
+  }
+};
+
 // Eine neue Location als Favorite hinzufügen
 
 export const addFavoriteToUser = async (req, res, next) => {
