@@ -25,12 +25,12 @@ mongoose
 mongoose.connection.on("error", console.log);
 
 app.use(express.json());
-// app.use(cors({ origin: `${URO}`, credentials: true }));
+app.use(cors({ origin: `${URO}`, credentials: true }));
 
-app.use(cors());
+// app.use(cors());
 app.use(morgan("dev"));
 app.use("/users", userRouter);
-app.use("/locations", locationsRouter);
+// app.use("/locations", locationsRouter);
 // app.use("/city", cityRouter);
 // app.use("/favorites", favoriteRouter);
 
