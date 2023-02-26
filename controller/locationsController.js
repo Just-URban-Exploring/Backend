@@ -4,7 +4,10 @@ import locationsModel from "../models/locationsModel.js";
 export const getLocation = async (req, res, next) => {
   try {
     const getLocation = await locationsModel.findById(req.params.id);
-    res.send(getLocation);
+    res.send({
+      message: "hey das sind meine Daten, du Honk",
+      getLocation,
+    });
   } catch (error) {
     next(error);
   }
