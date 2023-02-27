@@ -5,7 +5,7 @@ export const getLocation = async (req, res, next) => {
   try {
     const getLocation = await locationsModel.findById(req.params.id);
     res.send({
-      message: "hey das ist nur eine Location, du Honk",
+      message: "Hier ist die Location mit der gesuchten id.",
       getLocation,
     });
   } catch (error) {
@@ -28,7 +28,7 @@ export const getAllLocations = async (req, res, next) => {
   try {
     const getAllLocations = await locationsModel.find();
     res.send({
-      message: "hey das sind alle Locations, du Honk",
+      message: "Hier sind alle Locations.",
       getAllLocations,
     });
   } catch (error) {
