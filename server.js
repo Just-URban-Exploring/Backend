@@ -11,7 +11,7 @@ import locationsRouter from "./routes/locationsRoute.js";
 // import cityRouter from "./routes/cityRoute.js";
 
 const URI = process.env.MONGO || "mongodb://localhost:5555/tourguide";
-const URO = process.env.CLIENT;
+const URO = "https://frontend-lyart-psi.vercel.app";
 const app = express();
 const PORT = 5555;
 
