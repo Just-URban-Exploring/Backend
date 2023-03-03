@@ -1,5 +1,5 @@
 function errorHandler (err, req, res, next) {
-  const statusCode = err.statusCode;
+  const statusCode = err.statusCode || 500
 
   res.status(statusCode).send({
     error: {
